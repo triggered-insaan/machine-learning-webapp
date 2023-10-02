@@ -1,0 +1,5 @@
+numpy
+scikit-learn
+aiohttp==3.8.5
+Flask
+gunicorn==21.2.0

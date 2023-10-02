@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Dragon-price-predictor</title>
+    <style>
+        body {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            width: 150px;
+            text-align: right;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .submit-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Dragon Real Estate - Price Predictor</h1>
+    <form action="/receive" method="POST">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="CRIM">CRIM:</label>
+                <input type="text" id="CRIM" name="CRIM" required>
+            </div>
+            <div class="form-group">
+                <label for="ZN">ZN:</label>
+                <input type="text" id="ZN" name="ZN" required>
+            </div>
+            <div class="form-group">
+                <label for="INDUS">INDUS:</label>
+                <input type="text" id="INDUS" name="INDUS" required>
+            </div>
+            <div class="form-group">
+                <label for="CHAS">CHAS:</label>
+                <input type="text" id="CHAS" name="CHAS" required>
+            </div>
+            <div class="form-group">
+                <label for="NOX">NOX:</label>
+                <input type="text" id="NOX" name="NOX" required>
+            </div>
+            <div class="form-group">
+                <label for="RM">RM:</label>
+                <input type="text" id="RM" name="RM" required>
+            </div>
+            <div class="form-group">
+                <label for="AGE">AGE:</label>
+                <input type="text" id="AGE" name="AGE" required>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="DIS">DIS:</label>
+                <input type="text" id="DIS" name="DIS" required>
+            </div>
+            <div class="form-group">
+                <label for="RAD">RAD:</label>
+                <input type="text" id="RAD" name="RAD" required>
+            </div>
+            <div class="form-group">
+                <label for="TAX">TAX:</label>
+                <input type="text" id="TAX" name="TAX" required>
+            </div>
+            <div class="form-group">
+                <label for="PTRATIO">PTRATIO:</label>
+                <input type="text" id="PTRATIO" name="PTRATIO" required>
+            </div>
+            <div class="form-group">
+                <label for="B">B:</label>
+                <input type="text" id="B" name="B" required>
+            </div>
+            <div class="form-group">
+                <label for="LSTAT">LSTAT:</label>
+                <input type="text" id="LSTAT" name="LSTAT" required>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <input type="submit" value="Submit" style="background-color: #4CAF50;">
+        </div>
+    </form>
+</body>
+
+</html>
