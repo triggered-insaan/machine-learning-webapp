@@ -10,6 +10,6 @@ def receive():
     
     # Evaluating the value using Dragon Model
     mdl=Model('model/dragon.model')
-    value=mdl.predict(array(input_data))*1000*82
+    value=mdl.predict(array(input_data))*1000*
     
     return render_template('result.html',value=value)
