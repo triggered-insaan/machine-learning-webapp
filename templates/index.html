@@ -8,46 +8,67 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #ffcc99; /* Light peach background */
+            font-family: Arial, sans-serif;
         }
 
         .form-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
+            grid-gap: 20px;
         }
 
         .form-group {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             margin-bottom: 20px;
         }
 
         .form-group label {
-            width: 150px;
-            text-align: right;
+            text-align: left;
+            font-weight: bold;
+            color: #333;
         }
 
         .form-group input {
-            width: 100%;
-            padding: 5px;
+            width: calc(100% - 20px); /* Adjusted width with equal margins on both sides */
+            padding: 10px;
+            border: 1px solid #ff9966; /* Light orange border */
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-left: 10px;
         }
 
         .submit-btn {
-            display: flex;
-            justify-content: center;
+            text-align: center;
             margin-top: 20px;
         }
 
         .submit-btn input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #ff5722; /* Orange background for the submit button */
             color: white;
             border: none;
             padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+            border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            font-family: 'Arial', sans-serif; /* Added a default font */
+        }
+
+        @media (max-width: 768px) {
+            .form-group input {
+                margin: 10px 0; /* Equal margins for all sides on small screens */
+            }
+
+            .form-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -84,8 +105,6 @@
                 <label for="AGE">AGE:</label>
                 <input type="text" id="AGE" name="AGE" required>
             </div>
-        </div>
-        <div class="form-container">
             <div class="form-group">
                 <label for="DIS">DIS:</label>
                 <input type="text" id="DIS" name="DIS" required>
@@ -112,7 +131,7 @@
             </div>
         </div>
         <div class="submit-btn">
-            <input type="submit" value="Submit" style="background-color: #4CAF50;">
+            <input type="submit" value="Submit">
         </div>
     </form>
 </body>
